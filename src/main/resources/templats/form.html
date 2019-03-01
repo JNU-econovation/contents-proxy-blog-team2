@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<div class=container>
+    <div class="panel panel-default content-main">
+        <form name="posts" method="post" action="/posts/form">
+            <div class="form-group">
+                <label for="title">제목</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="제목"/>
+            </div>
+            <div class="form-group">
+                <label for="url">Url</label>
+                <input type="text" class="form-control" id="url" name="url" placeholder="url"/>
+            </div>
+            <button type="submit" class="btn btn-default clearfix pull-right">글쓰기</button>
+            <div class="clearfix"/>
+        </form>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"/>
+</body>
+</html>
