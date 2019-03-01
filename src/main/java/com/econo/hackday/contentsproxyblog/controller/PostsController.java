@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Controller
 public class PostsController {
 
@@ -20,10 +17,7 @@ public class PostsController {
 
     @GetMapping("")
     public String start(Model model) {
-        List<Posts> postsList = new ArrayList<>();
-        postsRepository.findAll().stream().forEach(posts -> postsList.add(posts));
-
-        model.addAttribute("postsList", postsList);
+        model.addAttribute("postsList", postsRepository.findAll());
 
         return "/index";
     }
