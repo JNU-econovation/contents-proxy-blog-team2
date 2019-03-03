@@ -16,10 +16,9 @@ public class PostsController {
     @Autowired
     private PostsRepository postsRepository;
 
-    @GetMapping("")
+    @GetMapping("/")
     public String start(Model model) {
         model.addAttribute("postsList", postsRepository.findAll());
-
         return "/index";
     }
 
