@@ -30,8 +30,8 @@ public class PostsController {
 
     @GetMapping("/posts/{id}")
     public String accessPosts(@PathVariable Long id, Model model) {
-        model.addAttribute("posts", postsRepository.findById(id));
+        model.addAttribute("posts", postsRepository.findById(id).orElseThrow(RuntimeException::new));
 
-        return "posts/show";
+        return "/posts/show";
     }
 }
