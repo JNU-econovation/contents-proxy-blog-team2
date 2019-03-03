@@ -1,4 +1,4 @@
-package com.econo.hackday.contentsproxyblog.egit;
+package com.econo.hackday.contentsproxyblog.utils;
 
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.eclipse.egit.github.core.IRepositoryIdProvider;
