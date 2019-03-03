@@ -1,4 +1,4 @@
-package com.econo.hackday.contentsproxyblog.egit;
+package com.econo.hackday.contentsproxyblog.utils;
 
 import org.junit.Test;
 
