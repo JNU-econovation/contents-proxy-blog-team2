@@ -32,6 +32,8 @@ dependencies {
     implementation "com.h2database:h2"
     compile('pl.allegro.tech.boot:handlebars-spring-boot-starter:0.3.0')
     compileOnly 'org.projectlombok:lombok'
+    compile 'com.vladsch.flexmark:flexmark-all:0.40.20'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     compile group: 'org.eclipse.mylyn.github', name: 'org.eclipse.egit.github.core', version: '2.1.5'
 }
+
