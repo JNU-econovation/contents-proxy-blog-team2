@@ -1,5 +1,6 @@
 package com.econo.hackday.contentsproxyblog.controller;
 
+
 import com.econo.hackday.contentsproxyblog.model.Posts;
 import com.econo.hackday.contentsproxyblog.repository.PostsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
