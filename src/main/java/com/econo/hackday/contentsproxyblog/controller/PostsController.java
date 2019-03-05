@@ -2,7 +2,6 @@ package com.econo.hackday.contentsproxyblog.controller;
 
 
 import com.econo.hackday.contentsproxyblog.model.Posts;
-import com.econo.hackday.contentsproxyblog.repository.PostsRepository;
 import com.econo.hackday.contentsproxyblog.service.PostsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,8 +30,9 @@ public class PostsController {
     }
 
     @GetMapping("/posts/{id}")
-    public String accessPosts(@PathVariable Long id, Model model) {
+    public String accessPosts(@PathVariable Long id, Model model) throws Exception {
         model.addAttribute("posts", postsService.findById(id));
+        model.addAttribute("contents", postsService.loadContents(id));
 
         return "/posts/show";
     }
